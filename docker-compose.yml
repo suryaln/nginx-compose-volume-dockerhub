@@ -1,0 +1,16 @@
+
+
+
+version: '3.1'
+
+services:
+  nginx:
+    build:
+      context: .
+
+    ports:
+      - "443:443"
+    volumes:
+      - mynginxvolume:/var/opt/nginx
+volumes:
+   mynginxvolume:
